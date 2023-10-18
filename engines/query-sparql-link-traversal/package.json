@@ -66,7 +66,8 @@
   "scripts": {
     "build": "npm run build:ts",
     "build:ts": "node \"../../node_modules/typescript/bin/tsc\"",
-    "prepare": "comunica-compile-config config/config-default.json > engine-default.js"
+    "prepare": "comunica-compile-config ../config-query-sparql-link-traversal/config/config-follow-match-pattern-bound.json > engine-default.js",
+    "browser": "npm run prepare && \"../../node_modules/webpack/bin/webpack.js\" --config webpack.config.js --mode production"
   },
   "browser": {
     "./lib/index.js": "./lib/index-browser.js"
